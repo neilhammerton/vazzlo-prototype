@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vazzlo — Rotating AI Receptionists</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--dark:#0A1628;--navy:#0F2341;--cyan:#00A9CE;--teal:#64CCC9;--mint:#B8F0ED;--slate:#94A3B8;--border:#1E3A5F}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--dark);color:#fff;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(720px 520px at 20% 12%,rgba(0,169,206,.10),transparent 60%),
+                     radial-gradient(680px 520px at 84% 20%,rgba(100,204,201,.07),transparent 60%);}
+  a{color:var(--teal);text-decoration:none}
+  a:hover{color:var(--mint)}
+
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand img{width:56px;height:56px}
+  .navbtns{display:flex;gap:12px}
+  .navbtns a{font-size:14px;font-weight:600;color:#fff;border:1px solid var(--border);border-radius:8px;padding:11px 18px}
+  .navbtns a:hover{border-color:var(--cyan);background:rgba(0,169,206,.08)}
+
+  .hero{max-width:920px;margin:0 auto;padding:60px 24px 96px;text-align:center;display:flex;flex-direction:column;align-items:center}
+
+  .stage{position:relative;width:172px;height:172px;margin-bottom:12px}
+  .ring-glow{position:absolute;inset:-16px;border-radius:50%;background:radial-gradient(circle,rgba(0,169,206,.40),transparent 68%);
+    filter:blur(6px);animation:breathe 3.6s ease-in-out infinite;z-index:0}
+  .slide{position:absolute;inset:0;opacity:0;transform:scale(.86);transition:opacity .9s ease,transform .9s ease;z-index:1}
+  .slide.on{opacity:1;transform:scale(1);z-index:2}
+  .slide img{width:100%;height:100%;object-fit:cover;border-radius:50%;transform:scale(1.06);display:block}
+  .name{height:20px;font-size:13px;font-weight:600;color:var(--mint);margin-bottom:16px;opacity:0;transition:opacity .5s ease}
+
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal);
+    border:1px solid rgba(0,169,206,.4);background:rgba(0,169,206,.08);padding:9px 18px;border-radius:999px;margin-bottom:26px}
+  h1{font-size:60px;line-height:1.04;font-weight:800;letter-spacing:-.02em;margin:0}
+  h1 .c{color:var(--cyan)}
+  .sub{margin:22px auto 0;max-width:600px;font-size:19px;color:var(--slate);font-weight:500;line-height:1.55}
+  .cta{margin-top:40px;display:inline-block;font-size:19px;font-weight:700;color:#062430;
+    background:linear-gradient(135deg,var(--cyan),var(--teal));border-radius:10px;padding:18px 56px;box-shadow:0 14px 40px rgba(0,169,206,.35)}
+  .cta:hover{color:#062430;filter:brightness(1.05)}
+  .fine{margin-top:16px;font-size:14px;color:var(--slate)}
+
+  .note{margin-top:64px;max-width:640px;font-size:13px;color:var(--slate);border-top:1px solid var(--border);padding-top:20px;line-height:1.6}
+  .note b{color:var(--mint)}
+
+  @keyframes breathe{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.07)}}
+  @media(max-width:680px){nav{padding:14px 18px}h1{font-size:40px}.hero{padding:40px 18px 72px}}
+  @media(prefers-reduced-motion:reduce){.ring-glow{animation:none}.slide{transition:none}}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="brand"><img src="vazzlo-logo.png" alt="Vazzlo"></div>
+    <div class="navbtns"><a href="#">Affiliate Homepage</a><a href="#">Login</a></div>
+  </nav>
+
+  <section class="hero">
+    <div class="stage" id="stage">
+      <div class="ring-glow"></div>
+      <div class="slide" data-name="Meet Grace"><img src="characters/Grace.png" alt="Grace"></div>
+      <div class="slide" data-name="Meet Marcus"><img src="characters/Marcus.png" alt="Marcus"></div>
+      <div class="slide" data-name="Meet Ruby"><img src="characters/Ruby.png" alt="Ruby"></div>
+      <div class="slide" data-name="Meet Tom"><img src="characters/Tom.png" alt="Tom"></div>
+      <div class="slide" data-name="Meet Priya"><img src="characters/Priya.png" alt="Priya"></div>
+      <div class="slide" data-name="Meet Kenji"><img src="characters/Kenji.png" alt="Kenji"></div>
+      <div class="slide" data-name="Meet Amara"><img src="characters/Amara.png" alt="Amara"></div>
+    </div>
+    <div class="name" id="name"></div>
+
+    <span class="badge">● AI Receptionist for UK Businesses</span>
+    <h1>Never miss a call.<br>Never miss a lead.<br><span class="c">Never miss a booking.</span></h1>
+    <p class="sub">An AI voice agent that answers your business calls 24/7 — taking messages, booking appointments, and routing urgent callers to you.</p>
+    <a class="cta" href="#">Start now for only £3.25/day</a>
+    <div class="fine">No contracts. Cancel anytime. Live in under 5 minutes.</div>
+
+    <p class="note">The rotation runs on your <b>seven illustrated receptionists</b> — Grace, Marcus, Ruby, Tom, Priya, Kenji and Amara — cross-fading every ~2.8s. To add more, generate them in the same style and drop the PNGs into <b>homepage/characters/</b>, then add a matching <code>.slide</code> line.</p>
+  </section>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0A1628"/><circle cx="50" cy="46" r="24" fill="none" stroke="#3BC6E0" stroke-width="3"/><circle cx="50" cy="42" r="9" fill="#64CCC9"/><path d="M34 64 Q50 52 66 64" fill="none" stroke="#64CCC9" stroke-width="4" stroke-linecap="round"/></svg>
+</template>
+<script src="receptionists.js"></script>
+</body>
+</html>

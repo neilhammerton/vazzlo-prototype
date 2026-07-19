@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@config "./theme/tailwind.config.js";
+
+body {
+  margin: 0;
+}
+
+/* Dark-themed native select dropdowns (from the monolith's global style tag) */
+select option {
+  background: #0F2341;
+  color: #ffffff;
+}
+select option:checked {
+  background: #00A9CE;
+  color: #ffffff;
+}
