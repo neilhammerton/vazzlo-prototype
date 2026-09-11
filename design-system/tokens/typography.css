@@ -1,0 +1,39 @@
+/* Reception Genies — Typography tokens */
+:root {
+  /* Families */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-accent: var(--font-body);
+  --font-mono: 'Menlo', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, monospace;
+
+  /* Weights */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700; /* @kind font */
+  --fw-extrabold: 800; /* @kind font */
+  --fw-black: 900; /* @kind font */
+
+  /* Type scale — display uses Outfit, text uses Inter */
+  --text-display-lg: 4rem;     /* 64px — hero headline */
+  --text-display: 3rem;        /* 48px */
+  --text-h1: 2.25rem;          /* 36px — section titles */
+  --text-h2: 1.75rem;          /* 28px */
+  --text-h3: 1.375rem;         /* 22px */
+  --text-title: 1.25rem;       /* 20px — card / plan title */
+  --text-lg: 1.125rem;         /* 18px — lead paragraph */
+  --text-base: 1rem;           /* 16px — body */
+  --text-sm: 0.875rem;         /* 14px — supporting / labels */
+  --text-xs: 0.75rem;          /* 12px — captions, eyebrows */
+
+  /* Line heights */
+  --lh-tight: 1.05; /* @kind font */
+  --lh-snug: 1.2; /* @kind font */
+  --lh-normal: 1.5; /* @kind font */
+  --lh-relaxed: 1.6; /* @kind font */
+
+  /* Letter spacing */
+  --ls-tight: -0.02em; /* @kind font */
+  --ls-normal: 0; /* @kind font */
+  --ls-wide: 0.04em; /* @kind font */
+}

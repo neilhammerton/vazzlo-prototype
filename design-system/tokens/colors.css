@@ -1,0 +1,81 @@
+/* Reception Genies — Color tokens
+   Base palette transcribed verbatim from the "Decided Branding" board. */
+:root {
+  /* ── Brand core ── */
+  --rg-navy: #06154C;        /* Deep Navy   — primary ink, dark surfaces */
+  --rg-amethyst: #3D1C5B;    /* Dark Amethyst — light-mode primary action */
+  --rg-blue: #0076FF;        /* Genie Blue  — links, accents */
+  --rg-sapphire: #5A69FF;    /* Electric Sapphire — dark-mode action, gradients */
+  --rg-ice: #1CEFE8;         /* Neon Ice    — signature accent, pills, icon tiles */
+  --rg-white: #FFFFFF;
+
+  /* ── Neutrals (zinc ramp used across UI) ── */
+  --rg-ink: #09090B;
+  --rg-ink-800: #18181B;
+  --rg-gray-600: #52525B;
+  --rg-gray-500: #71717A;
+  --rg-gray-450: #747D89;
+  --rg-gray-300: #D4D4D8;
+  --rg-border: #E4E4E7;
+  --rg-gray-100: #F4F4F5;
+  --rg-gray-50: #FAFAFA;
+  --rg-black: #000000;
+
+  /* ── Semantic status ── */
+  --rg-success: #00C950;
+  --rg-success-bright: #05DF72;
+
+  /* ── Surface tints (pale brand washes) ── */
+  --rg-tint-sapphire: #EEF1FF;   /* stats bar / "How it works" section */
+  --rg-tint-sapphire-2: #E4E9FF;
+  --rg-tint-ice: #E4FEFC;
+  --rg-navy-800: #0B1C5C;        /* dark-mode raised card */
+  --rg-navy-700: #10245F;
+
+  /* ── Gradients ── */
+  --rg-gradient-hero: linear-gradient(129.869deg, #06154C -25.89%, #5A69FF 132.23%); /* @kind color */
+  --rg-gradient-blue: linear-gradient(218.01deg, #0076FF -10.5%, #06154C 111.57%); /* @kind color */
+  --rg-gradient-sapphire: linear-gradient(180deg, #3D1C5B 0%, #5A69FF 100%); /* @kind color */
+  --rg-gradient-dark: linear-gradient(180deg, #06154C 0%, #0B1C5C 100%); /* @kind color */
+
+  /* ══ Semantic aliases — LIGHT (default) ══ */
+  --text-strong: var(--rg-navy);
+  --text-body: var(--rg-gray-500);
+  --text-muted: var(--rg-gray-450);
+  --text-inverse: #FFFFFF;
+  --surface-page: #FFFFFF;
+  --surface-card: #FFFFFF;
+  --surface-muted: var(--rg-tint-sapphire);
+  --surface-accent-soft: var(--rg-tint-ice);
+  --border-subtle: var(--rg-border);
+  --border-strong: var(--rg-gray-300);
+
+  --accent: var(--rg-ice);
+  --accent-ink: var(--rg-navy);
+  --primary: var(--rg-amethyst);
+  --primary-ink: #FFFFFF;
+  --link: var(--rg-blue);
+  --link-hover: #0B1C5C;
+  --success: var(--rg-success);
+}
+
+/* ══ Semantic aliases — DARK ══ */
+[data-theme="dark"] {
+  --text-strong: #FFFFFF;
+  --text-body: rgba(255,255,255,0.72);
+  --text-muted: rgba(255,255,255,0.55);
+  --text-inverse: var(--rg-navy);
+  --surface-page: var(--rg-navy);
+  --surface-card: var(--rg-navy-800);
+  --surface-muted: var(--rg-navy-700);
+  --surface-accent-soft: rgba(28,239,232,0.10);
+  --border-subtle: rgba(255,255,255,0.10);
+  --border-strong: rgba(255,255,255,0.18);
+
+  --accent: var(--rg-ice);
+  --accent-ink: var(--rg-navy);
+  --primary: var(--rg-sapphire);
+  --primary-ink: #FFFFFF;
+  --link: var(--rg-ice);
+  --link-hover: #FFFFFF;
+}

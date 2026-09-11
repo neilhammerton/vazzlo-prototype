@@ -1,0 +1,42 @@
+<!-- @dsCard group="Components" viewport="700x320" name="Buttons, badges & icons" subtitle="Core primitives — actions, status, icon chips" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:26px;background:#fff;font-family:var(--font-body)}.col{display:flex;flex-direction:column;gap:20px}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { Button, Badge, IconTile, Icon } = window.ReceptionGeniesDesignSystem_94e232;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className="col">
+    <div className="row">
+      <Button variant="primary" iconRight={<Icon name="arrow-right" size={18}/>}>Start now</Button>
+      <Button variant="accent">Get Started</Button>
+      <Button variant="secondary" icon={<Icon name="phone-call" size={18}/>}>Listen to a demo</Button>
+      <Button variant="ghost">Sign in</Button>
+    </div>
+    <div className="row">
+      <Button variant="primary" size="sm">Small</Button>
+      <Button variant="primary" size="md">Medium</Button>
+      <Button variant="primary" size="lg">Large</Button>
+      <Button variant="primary" disabled>Disabled</Button>
+    </div>
+    <div className="row">
+      <Badge variant="live">Grace is live now</Badge>
+      <Badge variant="accent" dot={false}>New</Badge>
+      <Badge variant="primary">Beta</Badge>
+    </div>
+    <div className="row">
+      <IconTile tone="ice"><Icon name="phone" size={22}/></IconTile>
+      <IconTile tone="ice"><Icon name="calendar" size={22}/></IconTile>
+      <IconTile tone="ice"><Icon name="message" size={22}/></IconTile>
+      <IconTile tone="navy"><Icon name="users" size={22} color="#fff"/></IconTile>
+      <IconTile tone="sapphire"><Icon name="mic" size={22} color="#fff"/></IconTile>
+      <IconTile tone="muted"><Icon name="help" size={22}/></IconTile>
+    </div>
+  </div>
+);
+</script>
+</body></html>

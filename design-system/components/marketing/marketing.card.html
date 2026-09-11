@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Marketing blocks" subtitle="Feature, step, stat & pricing components" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:26px;background:#fff;font-family:var(--font-body)}.col{display:flex;flex-direction:column;gap:22px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.stats{display:flex;gap:40px;padding:20px 24px;background:var(--surface-muted);border-radius:var(--radius-md)}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const M = window.ReceptionGeniesDesignSystem_94e232;
+const { FeatureCard, StepCard, StatItem, PricingCard } = M;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className="col">
+    <div className="g3">
+      <FeatureCard icon="phone" title="24/7 Call Answering">Every call gets answered, day or night. No more missed opportunities.</FeatureCard>
+      <FeatureCard icon="calendar" title="Appointment Booking">Integrates with your calendar to schedule, reschedule or cancel.</FeatureCard>
+      <FeatureCard icon="message" title="Take Messages">Qualifies leads before forwarding details to your CRM or inbox.</FeatureCard>
+    </div>
+    <div className="g3">
+      <StepCard number="01" title="Tell us about your business">Upload a document about your services. Our AI learns your hours, team and FAQs.</StepCard>
+      <StepCard number="02" title="Choose your AI receptionist">Pick a name, voice and personality. Preview how they greet callers.</StepCard>
+      <StepCard number="03" title="Go live instantly">We assign a UK 0333 number. Divert your line and the AI starts answering.</StepCard>
+    </div>
+    <div className="stats">
+      <StatItem value="24/7" label="AI receptionist coverage" />
+      <StatItem value={<span>&lt;5 min</span>} label="from signup to live" />
+      <StatItem value="47%" label="of SME calls go unanswered" />
+      <StatItem value="85%" label="of callers never try again" />
+    </div>
+    <PricingCard description="The complete AI receptionist solution for growing UK businesses." price="£3.25" period="/day" priceNote="That's just £99/month + VAT — no additional charges" footnote="No contracts. Cancel anytime. Live in under 5 minutes." features={["24/7/365 availability","Customised AI personality & script","Dedicated UK 0333 number","Calendar & CRM integrations","Real-time SMS & email notifications","Cancel anytime"]} />
+  </div>
+);
+</script>
+</body></html>

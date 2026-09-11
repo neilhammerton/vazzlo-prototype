@@ -1,0 +1,36 @@
+/* Reception Genies — base element defaults & helpers */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  margin: 0;
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+a { color: var(--link); text-decoration: none; transition: color var(--dur) var(--ease-out); }
+a:hover { color: var(--link-hover); }
+
+/* Utility text classes mapped to the scale */
+.rg-display { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--text-display-lg); line-height: var(--lh-tight); letter-spacing: var(--ls-tight); color: var(--text-strong); }
+.rg-eyebrow { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-xs); letter-spacing: var(--ls-wide); text-transform: uppercase; color: var(--text-muted); }
+.rg-lead { font-size: var(--text-lg); line-height: var(--lh-relaxed); color: var(--text-body); }
+
+::selection { background: var(--rg-ice); color: var(--rg-navy); }
+
+:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: var(--radius-sm); }

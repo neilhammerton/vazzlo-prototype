@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" viewport="700x150" name="Avatars" subtitle="Circular receptionist avatars with brand ring" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:22px;background:#fff;display:flex;align-items:center;justify-content:center;gap:22px}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { Avatar } = window.ReceptionGeniesDesignSystem_94e232;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment>
+    <Avatar src="../../assets/avatars/grace-light.png" size={92} status />
+    <Avatar src="../../assets/avatars/kenji-light.png" size={72} />
+    <Avatar src="../../assets/avatars/priya-light.png" size={72} ring={false} />
+    <Avatar src="../../assets/avatars/tom-light.png" size={56} />
+  </React.Fragment>
+);
+</script>
+</body></html>

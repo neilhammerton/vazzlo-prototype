@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Form input" subtitle="Labelled text fields with hint, icon & error" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:26px;background:#fff;font-family:var(--font-body)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:620px}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { Input, Icon } = window.ReceptionGeniesDesignSystem_94e232;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className="grid">
+    <Input label="First name" placeholder="Jane" />
+    <Input label="Company name" placeholder="e.g. Acme Ltd" icon={<Icon name="building" size={18}/>} />
+    <Input label="Mobile number" placeholder="07700 900000" hint="We'll text your setup link here." />
+    <Input label="Work email" placeholder="jane@acme.co.uk" defaultValue="jane@acme" error="Enter a valid email address." />
+  </div>
+);
+</script>
+</body></html>
