@@ -8,6 +8,7 @@ import AgentCard from '../components/AgentCard';
 import AgentPreview from '../components/AgentPreview';
 import CalendarIntegration, { GoogleIcon } from '../components/CalendarIntegration';
 import { AGENTS } from '../data/agents';
+import avaLogoWhite from '../assets/brand/ava-horizontal-white.png';
 
 export default function CustomerSignup() {
   const navigate = useNavigate();
@@ -208,9 +209,7 @@ export default function CustomerSignup() {
         <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--vz-muted)', marginBottom: 12, textAlign: 'center' }}>📧 Confirmation email preview</h3>
         <div style={{ background: '#FFFFFF', borderRadius: 12, overflow: 'hidden', border: `1px solid var(--vz-border)` }}>
           <div style={{ background: `linear-gradient(135deg,${T.dark},${T.navy})`, padding: '24px 28px', display: 'flex', alignItems: 'center', gap: 10 }}>
-            <div style={{ width: 28, height: 28, borderRadius: '50%', background: `linear-gradient(135deg,${T.coral},${T.cyan})` }} />
-            {/* Email mock keeps fixed colours in both themes */}
-            <span style={{ fontSize: 16, fontWeight: 700, color: T.white }}>Ava</span>
+            <img src={avaLogoWhite} alt="Ava" style={{ height: 36, width: 'auto' }} />
           </div>
           <div style={{ padding: '28px', color: '#1a1a2e' }}>
             <h2 style={{ fontSize: 22, fontWeight: 700, margin: '0 0 8px', color: '#0A1628' }}>Welcome to Ava! 🎉</h2>
